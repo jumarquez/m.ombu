@@ -1,18 +1,10 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
+require('dotenv').config();
+const app = require('./app');
+require('./database1');
 
-require('./database');
+async function main() {
+    await app.listen(app.get('port'));
+    console.log('Server on port', app.get('port'));
+}
 
-// settings
-app.set('port', process.env.PORT || 4000)
-
-// middlewares
-app.use(express.json());
-app.use(cors());
-
-// routes
-app.use('/api', require('./routes/index'));
-
-app.listen(app.get('port'));
-console.log('Server on port', app.get('port'));
+main();
