@@ -12,7 +12,7 @@ const grupoSchema = new Schema({
     },
     cuit: String,
     eMail: {
-        type: eMail,
+        type: String,
         trim: true
     },
     password: {
@@ -40,7 +40,7 @@ const grupoSchema = new Schema({
         },
         movil:{
             type: String,
-            trim
+            trim: true
         }
     },
     fIni: Date,

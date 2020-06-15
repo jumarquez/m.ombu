@@ -9,8 +9,8 @@ router.route('/')
 
 router.route('/:id')
     .delete(deleteGrupo)
-    .put(updateGrupo)
-    .get(getGrupo); 
+    .get(getGrupo)
+    .put(updateGrupo);
 
 module.exports = router;
  

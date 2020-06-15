@@ -13,5 +13,7 @@ app.use(express.json());
 // routes
 //app.use('/api/notes', require('./routes/notes'));
 app.use('/api/users', require('./routes/users'));
+app.use('/api/grupo', require('./routes/grupo'));
+app.use('/api/tComb', require('./routes/tComb'))
 
 module.exports = app;
